@@ -14,6 +14,7 @@ class EditItemViewController: UIViewController {
     @IBOutlet var noteField: UITextField!
     @IBOutlet var dateLabel: UILabel!
     
+    // ref to CoreData Functions
     let cdf = CoreDataFunctions()
     
     // passed item from previous vc

@@ -13,6 +13,7 @@ class AddItemViewController: UIViewController {
     @IBOutlet var titleField: UITextField!
     @IBOutlet var itemNoteField: UITextField!
     
+    // ref to CoreData Functions
     let cdf = CoreDataFunctions()
     
     override func viewDidLoad() {
@@ -21,6 +22,8 @@ class AddItemViewController: UIViewController {
         // Set textfields delegate
         titleField.delegate = self
         itemNoteField.delegate = self
+        
+        styleTextFields()
     }
     
     // When the Save button is tapped
@@ -56,5 +59,16 @@ extension AddItemViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return true
+    }
+    
+    private func styleTextFields() {
+        // style UI elements programatically
+        titleField.layer.borderColor = UIColor.link.cgColor
+        titleField.layer.borderWidth = 2
+        titleField.layer.cornerRadius = 10
+        
+        itemNoteField.layer.borderColor = UIColor.link.cgColor
+        itemNoteField.layer.borderWidth = 2
+        itemNoteField.layer.cornerRadius = 10
     }
 }

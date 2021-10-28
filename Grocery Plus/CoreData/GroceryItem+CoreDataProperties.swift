@@ -19,6 +19,7 @@ extension GroceryItem {
     @NSManaged public var date_added: Date?
     @NSManaged public var title: String?
     @NSManaged public var item_notes: String?
+    @NSManaged public var category: String?
 
 }
 

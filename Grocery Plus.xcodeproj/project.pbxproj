@@ -21,6 +21,7 @@
 		A2826A7E2729DE840040763A /* GroceryItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2826A7C2729DE840040763A /* GroceryItem+CoreDataClass.swift */; };
 		A2826A7F2729DE840040763A /* GroceryItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2826A7D2729DE840040763A /* GroceryItem+CoreDataProperties.swift */; };
 		A2A7B57A272A3FFF001FCE4C /* CoreDataFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A7B579272A3FFF001FCE4C /* CoreDataFunctions.swift */; };
+		A2A7B59C272B0617001FCE4C /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A7B59B272B0617001FCE4C /* OnboardingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		A2826A7C2729DE840040763A /* GroceryItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GroceryItem+CoreDataClass.swift"; sourceTree = "<group>"; };
 		A2826A7D2729DE840040763A /* GroceryItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GroceryItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A2A7B579272A3FFF001FCE4C /* CoreDataFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataFunctions.swift; sourceTree = "<group>"; };
+		A2A7B59B272B0617001FCE4C /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 				A2826A732729BA5F0040763A /* ItemListViewController.swift */,
 				A2826A752729BA700040763A /* ViewItemViewController.swift */,
 				A2826A772729BA940040763A /* EditItemViewController.swift */,
+				A2A7B59B272B0617001FCE4C /* OnboardingViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 				A2826A782729BA940040763A /* EditItemViewController.swift in Sources */,
 				A2826A5B2729B3E90040763A /* AppDelegate.swift in Sources */,
 				A2826A5D2729B3E90040763A /* SceneDelegate.swift in Sources */,
+				A2A7B59C272B0617001FCE4C /* OnboardingViewController.swift in Sources */,
 				A2826A652729B3E90040763A /* Grocery_Plus.xcdatamodeld in Sources */,
 				A2826A7E2729DE840040763A /* GroceryItem+CoreDataClass.swift in Sources */,
 				A2826A7F2729DE840040763A /* GroceryItem+CoreDataProperties.swift in Sources */,

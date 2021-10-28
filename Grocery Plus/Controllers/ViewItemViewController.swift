@@ -12,6 +12,7 @@ class ViewItemViewController: UIViewController {
     //UI Outlets
     @IBOutlet var dateLabel: UILabel!
     @IBOutlet var noteLabel: UILabel!
+    @IBOutlet var categoryLabel: UILabel!
     
     // passed item from previous vc
     var selectedItem = GroceryItem()
@@ -25,8 +26,9 @@ class ViewItemViewController: UIViewController {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MM/dd/YY"
         let dateAdded = dateFormatter.string(from: date!)
-        dateLabel.text = dateAdded
         
+        dateLabel.text = dateAdded
+        categoryLabel.text = selectedItem.category
         noteLabel.text = selectedItem.item_notes
     }
     

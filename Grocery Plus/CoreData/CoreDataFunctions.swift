@@ -13,10 +13,11 @@ class CoreDataFunctions {
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     // Add new item to CoreData
-    func createItem(title: String, itemNote: String) {
+    func createItem(title: String, itemNote: String, category: String) {
         let newItem = GroceryItem(context: context)
         newItem.title = title
         newItem.item_notes = itemNote
+        newItem.category = category
         newItem.date_added = Date()
         
         do {

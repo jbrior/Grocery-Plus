@@ -87,12 +87,12 @@
 		A2826A792729BAEF0040763A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				A2A7B59B272B0617001FCE4C /* OnboardingViewController.swift */,
 				A2826A5E2729B3E90040763A /* HomeViewController.swift */,
 				A2826A712729BA410040763A /* AddItemViewController.swift */,
 				A2826A732729BA5F0040763A /* ItemListViewController.swift */,
 				A2826A752729BA700040763A /* ViewItemViewController.swift */,
 				A2826A772729BA940040763A /* EditItemViewController.swift */,
-				A2A7B59B272B0617001FCE4C /* OnboardingViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -112,8 +112,8 @@
 			children = (
 				A2826A7C2729DE840040763A /* GroceryItem+CoreDataClass.swift */,
 				A2826A7D2729DE840040763A /* GroceryItem+CoreDataProperties.swift */,
-				A2826A632729B3E90040763A /* Grocery_Plus.xcdatamodeld */,
 				A2A7B579272A3FFF001FCE4C /* CoreDataFunctions.swift */,
+				A2826A632729B3E90040763A /* Grocery_Plus.xcdatamodeld */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -356,8 +356,8 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -385,8 +385,8 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -48,13 +48,6 @@ class ItemListViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         
         getAllItems()
-        
-        // check if models array is empty and display 'emptyLabel' accordingly
-        if models.count > 0 {
-            emptyLabel.isHidden = true
-        } else {
-            emptyLabel.isHidden = false
-        }
     }
     
     // Retrieve all grocery items from CoreData
@@ -68,13 +61,23 @@ class ItemListViewController: UIViewController {
         }
         catch {
             // handle error here
+            print("Error with fetching data for tableview.")
+        }
+        
+        // check if models array is empty and display 'emptyLabel' accordingly
+        if models.count > 0 {
+            emptyLabel.isHidden = true
+        } else {
+            emptyLabel.isHidden = false
         }
     }
 }
 
-//MARK: Add tableview protocals / setup table and cells
+//MARK: TableView Setup
+//Add tableview protocals/functionality / setup table and cells
 
 extension ItemListViewController: UITableViewDelegate, UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return models.count
     }
@@ -86,6 +89,7 @@ extension ItemListViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    // handle when user taps on cells
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
@@ -94,5 +98,18 @@ extension ItemListViewController: UITableViewDelegate, UITableViewDataSource {
         let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "ViewItemViewController") as? ViewItemViewController
         vc?.selectedItem = models[indexPath.row]
         self.navigationController?.pushViewController(vc!, animated: true)
+    }
+    
+    // add swipe to delete functionality in the tableview
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    // delete item in coredata and reload tableview via 'getAllItems' func
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            CoreDataFunctions().deleteItem(item: models[indexPath.row])
+            getAllItems()
+        }
     }
 }

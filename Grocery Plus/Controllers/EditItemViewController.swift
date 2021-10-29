@@ -58,7 +58,7 @@ class EditItemViewController: UIViewController {
     @IBAction func updateButtonPressed(_ sender: UIButton) {
         
         // check if fields are empty or not
-        // *********validation still needs work*********
+        // *********STILL NEEDS VALIDATION*********
         guard let title = titleField.text, !title.isEmpty else {
             return
         }
@@ -71,8 +71,6 @@ class EditItemViewController: UIViewController {
         // pop back to root vc
         navigationController?.popToRootViewController(animated: true)
     }
-    
-    
 }
 
 // Dissmiss keyboard upon tapping the "return" key

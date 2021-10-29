@@ -9,8 +9,29 @@ import UIKit
 
 class OnboardingViewController: UIViewController {
     
+    @IBOutlet var textField: UITextField!
+    
+    let nameKey = "userName"
+    
+    let ref = UserDefaults.standard
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .yellow
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        guard let _ = ref.object(forKey: nameKey) else {
+            print("User not set!")
+            return
+        }
+        DispatchQueue.main.async {
+            self.performSegue(withIdentifier: "toHome", sender: self)
+        }
+    }
+    
+    @IBAction func saveButtonTapped(_ sender: UIButton) {
+        // *********STILL NEEDS VALIDATION*********
+        ref.set(textField.text, forKey: nameKey)
+        performSegue(withIdentifier: "toHome", sender: self)
     }
 }

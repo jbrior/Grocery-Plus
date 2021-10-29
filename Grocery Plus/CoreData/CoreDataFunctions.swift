@@ -25,6 +25,7 @@ class CoreDataFunctions {
         }
         catch {
             // handle error
+            print("Error creating new item in CoreData.")
         }
     }
     
@@ -37,6 +38,7 @@ class CoreDataFunctions {
         }
         catch {
             // handle error
+            print("Error deleting item from CoreData.")
         }
     }
     
@@ -50,6 +52,7 @@ class CoreDataFunctions {
         }
         catch {
             // handle error
+            print("Error updating item in CoreData.")
         }
     }
 }
